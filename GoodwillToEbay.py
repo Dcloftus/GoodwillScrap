@@ -24,8 +24,8 @@ from selenium.webdriver.common.by import By
 # Switches
 debug_on = True
 UserInput_on = False
-Goodwill_on = False
-eBay_on = True
+Goodwill_on = True
+eBay_on = False
 
 # Goodwill - Scrapiong Vairables
 pageToSearch = 1
@@ -108,7 +108,7 @@ def ebaySearch(accessToken, searchString):
     #Make GET Request
     response = requests.get(searchUrl, params=params, headers=headers)
 
-    return response
+    return response.json()
 
 
 #============================================================================================================
@@ -129,10 +129,10 @@ if(Goodwill_on):
     options.headless = False
     options.add_argument("--window-size=1920,1200")
 
-DRIVER_PATH = './chromedriver'
-driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
-driver.get("https://shopgoodwill.com/categories/new?st=&sg=New&c=&s=&lp=0&hp=999999&sbn=&spo=false&snpo=false&socs=false&sd=false&sca=false&caed=7%2F6%2F2022&cadb=7&scs=false&sis=false&col=1&p=1&ps=40&desc=false&ss=0&UseBuyerPrefs=true&sus=false&cln=1&catIds=&pn=&wc=false&mci=false&hmt=false&layout=list")
-driver.explicitly_wait(driver.execute_script('return document.readyState') == 'complete')
+    DRIVER_PATH = './chromedriver'
+    driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
+    driver.get("https://shopgoodwill.com/categories/new?st=&sg=New&c=&s=&lp=0&hp=999999&sbn=&spo=false&snpo=false&socs=false&sd=false&sca=false&caed=7%2F6%2F2022&cadb=7&scs=false&sis=false&col=1&p=1&ps=40&desc=false&ss=0&UseBuyerPrefs=true&sus=false&cln=1&catIds=&pn=&wc=false&mci=false&hmt=false&layout=list")
+    driver.explicitly_wait(driver.execute_script('return document.readyState') == 'complete')
 
     #============================================================================================================
     #= Gather Certian data from the site into memory
