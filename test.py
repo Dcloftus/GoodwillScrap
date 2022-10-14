@@ -1,7 +1,58 @@
 import json
 import requests
+import csv
+import pandas as pd
 
-goodwill_url = "https://shopgoodwill.com/categories/new?st=&sg=New&c=&s=&lp=0&hp=999999&sbn=&spo=false&snpo=false&socs=false&sd=false&sca=false&caed=7%2F6%2F2022&cadb=7&scs=false&sis=false&col=1&p=1&ps=40&desc=false&ss=0&UseBuyerPrefs=true&sus=false&cln=1&catIds=&pn=&wc=false&mci=false&hmt=false&layout=list&ihp="
+goodwill_url = "https://buyerapi.shopgoodwill.com/api/Search/ItemListing"
+csvFile = "test_api.csv"
 
-response = requests.get(goodwill_url)
-print
+#////////////////////////////
+maxpages = 5
+body = {
+    "isSize": "false",
+    "isWeddingCatagory": "false",
+    "isMultipleCategoryIds": "false",
+    "isFromHeaderMenuTab": "false",
+    "layout": "list",
+    "isFromHomePage": "false",
+    "searchText": "",
+    "selectedGroup": "New",
+    "selectedCategoryIds": "",
+    "selectedSellerIds": "",
+    "lowPrice": "0",
+    "highPrice": "99999",
+    "searchBuyNowOnly": "1",
+    "searchPickupOnly": "false",
+    "searchNoPickupOnly": "false",
+    "searchOneCentShippingOnly": "false",
+    "searchDescriptions": "false",
+    "searchClosedAuctions": "false",
+    "closedAuctionEndingDate": "7/6/2022",
+    "closedAuctionDaysBack": "7",
+    "searchCanadaShipping": "false",
+    "searchInternationalShippingOnly": "false",
+    "sortColumn": "1",
+    "page": 1,
+    "pageSize": "50",
+    "sortDescending": "false",
+    "savedSearchId": 0,
+    "useBuyerPrefs": "true",
+    "searchUSOnlyShipping": "false",
+    "categoryLevelNo": "1",
+    "categoryLevel": 1,
+    "categoryId": 0,
+    "partNumber": "",
+    "catIds": ""
+}
+#////////////////////////////
+f = open(csvFile, 'w')
+writer = csv.writer(f)
+for i in range(1,maxpages):
+  body["page"] = i
+  httpresponse = requests.post(goodwill_url, json=body).json()
+  response = pd.DataFrame(httpresponse.get('searchResults'))
+  print(response)
+
+  for item in response.values:
+    #output = [item.title, item.buyNowPrice, item.endTime]
+    writer.writerow(item)
