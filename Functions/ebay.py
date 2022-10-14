@@ -38,7 +38,6 @@ def auth():
     #Make POST request to the auth API
     response = requests.post(accessTokenUrl, data=body, headers=headers)
     accessToken = response.json()['access_token']
-    #if(debug_on): print(accessToken)
 
     return accessToken
 
@@ -55,5 +54,5 @@ def search(accessToken, searchString):
 
     #Make GET Request
     response = requests.get(searchUrl, params=params, headers=headers)
-    #if(debug_on): print(json.dumps(response.json(), indent=4))
+
     return response.json()
