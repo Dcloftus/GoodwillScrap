@@ -139,6 +139,7 @@ if(Goodwill_on):
 
     driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
     driver.get("https://shopgoodwill.com/categories/new?st=&sg=New&c=&s=&lp=0&hp=999999&sbn=&spo=false&snpo=false&socs=false&sd=false&sca=false&caed=7%2F6%2F2022&cadb=7&scs=false&sis=false&col=1&p=1&ps=40&desc=false&ss=0&UseBuyerPrefs=true&sus=false&cln=1&catIds=&pn=&wc=false&mci=false&hmt=false&layout=list")
+    time.sleep(5)
 
     #============================================================================================================
     #= Gather Certian data from the site into memory
