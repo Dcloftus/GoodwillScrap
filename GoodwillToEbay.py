@@ -7,10 +7,12 @@
 #============================================================================================================
 
 import csv
+import json
 import time
 import requests
 import platform
 
+from statistics import mean
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -24,16 +26,17 @@ from selenium.webdriver.common.by import By
 #============================================================================================================
 #OS Determination
 os = platform.platform()
-if(os.find("macOS")):
+
+if "macOS" in os:
     DRIVER_PATH = '/Users/danielloftus/bin/chromedriver'
 else:
     DRIVER_PATH = './chromedriver'
 
 # Switches
-debug_on = False
+debug_on = True
 UserInput_on = False
-Goodwill_on = True
-eBay_on = False
+Goodwill_on = False
+eBay_on = True
 
 # Goodwill - Scrapiong Vairables
 pageToSearch = 1
@@ -98,7 +101,7 @@ def ebayAuth():
     #Make POST request to the auth API
     response = requests.post(accessTokenUrl, data=body, headers=headers)
     accessToken = response.json()['access_token']
-    if(debug_on): print(accessToken)
+    #if(debug_on): print(accessToken)
 
     return accessToken
 
@@ -115,7 +118,7 @@ def ebaySearch(accessToken, searchString):
 
     #Make GET Request
     response = requests.get(searchUrl, params=params, headers=headers)
-
+    #if(debug_on): print(json.dumps(response.json(), indent=4))
     return response.json()
 
 
@@ -211,8 +214,26 @@ if(eBay_on):
         datareader = csv.reader(csvfile)
         for row in datareader:
             if(debug_on):
-                print("---------------- Print CSV Rows cells at a time ----------------")
+                print("---------------- Search Row ----------------")
                 print("Name: " + row[0])
                 print("Price: " + row[1])
                 print("Time Left: " + row[2])
-            
+            #Call Search API with CSV Values
+            response = ebaySearch(accessToken, row[0])
+            #print(json.dumps(response, indent=4))
+
+            #Check if there is a response
+            if(debug_on): print("Searching Ebay for: " + row[0])
+            if(response["total"] is not 0):
+                # Gather Prices
+                priceArray = []
+                for thing in response["itemSummaries"]:
+                    priceArray.append(float(thing["price"]["value"]))
+
+                if(debug_on):
+                    print("All Prices: " + str(priceArray))
+                    print("Mean: " + str(mean(priceArray)))
+                    print("")
+            else:
+                if(debug_on): print("eBay did not return any listings for: " + row[0])
+                

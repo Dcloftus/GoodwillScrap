@@ -7,6 +7,7 @@
 #============================================================================================================
 
 import json
+from statistics import mean, median
 import requests
 
 #============================================================================================================
@@ -20,8 +21,8 @@ sandBoxAuthUrl = "https://api.sandbox.ebay.com/identity/v1/oauth2/token"
 
 # eBay API - Browse Variables
 searchUrl = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search"
-limit = 1
-offset = 0
+limit = 5
+offset = 10
 
 #============================================================================================================
 #============================================================================================================
@@ -71,7 +72,12 @@ print(accessToken)
 
 response = ebaySearch(accessToken, "Shoes")
 
-#print(json.dumps(response, indent=4))
+print(json.dumps(response, indent=4))
 
-#print(json.dumps(response["itemSummaries"]["price"]["value"], indent=4))
-print(response["itemSummaries"][0]["price"]["value"])
+#print(response["itemSummaries"][0]["price"]["value"])
+
+priceArray = []
+for thing in response["itemSummaries"]:
+    priceArray.append(float(thing["price"]["value"]))
+print(priceArray)
+print(mean(priceArray))
