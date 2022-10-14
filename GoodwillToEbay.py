@@ -6,6 +6,9 @@
 #============================================================================================================
 #============================================================================================================
 
+import Functions.goodwill as goodwill
+import Functions.ebay as ebay
+
 import csv
 import json
 import time
@@ -45,15 +48,6 @@ numberOfItemsPerPage = 40
 # Shared File Vaiables
 csvFile = "test.csv"
 
-# eBay API - Authentication Variables
-accessTokenUrl = "https://api.sandbox.ebay.com/identity/v1/oauth2/token"
-accessToken = ""
-
-# eBay API - Browse Variables
-searchUrl = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search"
-limit = 5
-offset = 0
-
 #============================================================================================================
 #= Ask the User to input custom variables
 #============================================================================================================
@@ -78,48 +72,6 @@ else:
         print('---------------- User input not requested, using default values  ----------------')
         print('Number of pages to search - ' + str(pageToSearch))
         print('Number of records per page - ' + str(numberOfItemsPerPage))
-
-
-
-
-#============================================================================================================
-#============================================================================================================
-#= Functions
-#============================================================================================================
-#============================================================================================================
-def ebayAuth():
-    #Set up Headers and body
-    headers =  {
-        "Content-Type":"application/x-www-form-urlencoded",
-        "Authorization":"Basic RGFuaWVsTG8tcmFhc3NhbmQtU0JYLTkzOWJjY2MzNS0yOWJkNmQ3YjpTQlgtMzliY2NjMzU4MTQxLTU0MzktNDU1Yi05MThhLWUxZjQ="
-        }
-    body = {
-        'grant_type':'client_credentials',
-        'scope':'https://api.ebay.com/oauth/api_scope'
-    }
-
-    #Make POST request to the auth API
-    response = requests.post(accessTokenUrl, data=body, headers=headers)
-    accessToken = response.json()['access_token']
-    #if(debug_on): print(accessToken)
-
-    return accessToken
-
-def ebaySearch(accessToken, searchString):
-    #Set up Headers and params
-    headers =  {
-        "Authorization":"Bearer " + accessToken
-        }
-    params = {
-        'q':searchString,
-        'limit':limit,
-        'offset':offset
-    }
-
-    #Make GET Request
-    response = requests.get(searchUrl, params=params, headers=headers)
-    #if(debug_on): print(json.dumps(response.json(), indent=4))
-    return response.json()
 
 
 #============================================================================================================
@@ -205,7 +157,7 @@ if(eBay_on):
     #============================================================================================================
     #= Call to get Access Token for eBay API calls
     #============================================================================================================
-    accessToken = ebayAuth()
+    accessToken = ebay.auth()
 
     #============================================================================================================
     #= Main eBay calls based on the csv file created above
@@ -219,7 +171,7 @@ if(eBay_on):
                 print("Price: " + row[1])
                 print("Time Left: " + row[2])
             #Call Search API with CSV Values
-            response = ebaySearch(accessToken, row[0])
+            response = ebay.search(accessToken, row[0])
             #print(json.dumps(response, indent=4))
 
             #Check if there is a response
