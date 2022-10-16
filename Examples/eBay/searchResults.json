@@ -1,0 +1,364 @@
+{
+    "href": "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=Shoes&limit=5&offset=10",
+    "total": 17,
+    "next": "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=Shoes&limit=5&offset=15",
+    "prev": "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=Shoes&limit=5&offset=5",
+    "limit": 5,
+    "offset": 10,
+    "itemSummaries": [
+        {
+            "itemId": "v1|110552095152|410108487783",
+            "title": "Buckle Shoe in Navy",
+            "itemGroupHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=110552095152",
+            "leafCategoryIds": [
+                "301"
+            ],
+            "categories": [
+                {
+                    "categoryId": "301",
+                    "categoryName": "Other Pet Supplies"
+                },
+                {
+                    "categoryId": "1281",
+                    "categoryName": "Pet Supplies"
+                }
+            ],
+            "price": {
+                "value": "628.00",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/v1%7C110552095152%7C410108487783",
+            "seller": {
+                "username": "testuser_pankaj9839",
+                "feedbackPercentage": "75.0",
+                "feedbackScore": 1
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    }
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "http://www.sandbox.ebay.com/itm/Buckle-Shoe-in-Navy-/110552095152?hash=item19bd6b19b0:i:110552095152",
+            "itemLocation": {
+                "postalCode": "352**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095152_2_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095152_3_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095152_4_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095152_5_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095152_6_0_1/225x225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "110552095152",
+            "availableCoupons": false,
+            "itemCreationDate": "2022-09-27T09:56:49.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|110552095610|410108488712",
+            "title": "Buckle Shoe in Navy",
+            "itemGroupHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=110552095610",
+            "leafCategoryIds": [
+                "301"
+            ],
+            "categories": [
+                {
+                    "categoryId": "301",
+                    "categoryName": "Other Pet Supplies"
+                },
+                {
+                    "categoryId": "1281",
+                    "categoryName": "Pet Supplies"
+                }
+            ],
+            "price": {
+                "value": "628.00",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/v1%7C110552095610%7C410108488712",
+            "seller": {
+                "username": "testuser_pankaj9839",
+                "feedbackPercentage": "75.0",
+                "feedbackScore": 1
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    }
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "http://www.sandbox.ebay.com/itm/Buckle-Shoe-in-Navy-/110552095610?hash=item19bd6b1b7a:i:110552095610",
+            "itemLocation": {
+                "postalCode": "352**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095610_2_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095610_3_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095610_4_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095610_5_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095610_6_0_1/225x225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "110552095610",
+            "availableCoupons": false,
+            "itemCreationDate": "2022-09-27T12:08:38.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|110552095017|410108487298",
+            "title": "Golf Shoe in White",
+            "itemGroupHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=110552095017",
+            "leafCategoryIds": [
+                "301"
+            ],
+            "categories": [
+                {
+                    "categoryId": "301",
+                    "categoryName": "Other Pet Supplies"
+                },
+                {
+                    "categoryId": "1281",
+                    "categoryName": "Pet Supplies"
+                }
+            ],
+            "price": {
+                "value": "568.00",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/v1%7C110552095017%7C410108487298",
+            "seller": {
+                "username": "testuser_pankaj9839",
+                "feedbackPercentage": "75.0",
+                "feedbackScore": 1
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    }
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "http://www.sandbox.ebay.com/itm/Golf-Shoe-in-White-/110552095017?hash=item19bd6b1929:i:110552095017",
+            "itemLocation": {
+                "postalCode": "352**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095017_2_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095017_3_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095017_4_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095017_5_0_1/225x225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "110552095017",
+            "availableCoupons": false,
+            "itemCreationDate": "2022-09-27T09:48:14.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|110552095169|410108487866",
+            "title": "Golf Shoe in Black",
+            "itemGroupHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=110552095169",
+            "leafCategoryIds": [
+                "301"
+            ],
+            "categories": [
+                {
+                    "categoryId": "301",
+                    "categoryName": "Other Pet Supplies"
+                },
+                {
+                    "categoryId": "1281",
+                    "categoryName": "Pet Supplies"
+                }
+            ],
+            "price": {
+                "value": "568.00",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/v1%7C110552095169%7C410108487866",
+            "seller": {
+                "username": "testuser_pankaj9839",
+                "feedbackPercentage": "75.0",
+                "feedbackScore": 1
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    }
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "http://www.sandbox.ebay.com/itm/Golf-Shoe-in-Black-/110552095169?hash=item19bd6b19c1:i:110552095169",
+            "itemLocation": {
+                "postalCode": "352**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095169_2_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095169_3_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095169_4_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095169_5_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095169_6_0_1/225x225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "110552095169",
+            "availableCoupons": false,
+            "itemCreationDate": "2022-09-27T09:57:48.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        },
+        {
+            "itemId": "v1|110552095173|410108487886",
+            "title": "Golf Shoe in White",
+            "itemGroupHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/get_items_by_item_group?item_group_id=110552095173",
+            "leafCategoryIds": [
+                "301"
+            ],
+            "categories": [
+                {
+                    "categoryId": "301",
+                    "categoryName": "Other Pet Supplies"
+                },
+                {
+                    "categoryId": "1281",
+                    "categoryName": "Pet Supplies"
+                }
+            ],
+            "price": {
+                "value": "568.00",
+                "currency": "USD"
+            },
+            "itemGroupType": "SELLER_DEFINED_VARIATIONS",
+            "itemHref": "https://api.sandbox.ebay.com/buy/browse/v1/item/v1%7C110552095173%7C410108487886",
+            "seller": {
+                "username": "testuser_pankaj9839",
+                "feedbackPercentage": "75.0",
+                "feedbackScore": 1
+            },
+            "condition": "New",
+            "conditionId": "1000",
+            "shippingOptions": [
+                {
+                    "shippingCostType": "FIXED",
+                    "shippingCost": {
+                        "value": "0.00",
+                        "currency": "USD"
+                    }
+                }
+            ],
+            "buyingOptions": [
+                "FIXED_PRICE"
+            ],
+            "itemWebUrl": "http://www.sandbox.ebay.com/itm/Golf-Shoe-in-White-/110552095173?hash=item19bd6b19c5:i:110552095173",
+            "itemLocation": {
+                "postalCode": "352**",
+                "country": "US"
+            },
+            "additionalImages": [
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095173_2_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095173_3_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095173_4_0_1/225x225.jpg"
+                },
+                {
+                    "imageUrl": "https://galleryplus.ebayimg.com/ws/web/110552095173_5_0_1/225x225.jpg"
+                }
+            ],
+            "adultOnly": false,
+            "legacyItemId": "110552095173",
+            "availableCoupons": false,
+            "itemCreationDate": "2022-09-27T09:58:03.000Z",
+            "topRatedBuyingExperience": false,
+            "priorityListing": false,
+            "listingMarketplaceId": "EBAY_US"
+        }
+    ]
+}

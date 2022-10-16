@@ -6,6 +6,7 @@
 #============================================================================================================
 #============================================================================================================
 
+from statistics import mean
 import requests
 
 #===========================================================================================================
@@ -19,7 +20,6 @@ accessToken = ""
 searchUrl = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search"
 limit = 5
 offset = 0
-
 
 #===========================================================================================================
 #= Functions
@@ -56,3 +56,10 @@ def search(accessToken, searchString):
     response = requests.get(searchUrl, params=params, headers=headers)
 
     return response.json()
+
+def meanOfResultsPrice(resultSet):
+    priceArray = []
+    for thing in resultSet["itemSummaries"]:
+        priceArray.append(float(thing["price"]["value"]))
+
+    return mean(priceArray)
