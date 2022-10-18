@@ -7,7 +7,7 @@ def Pull_items():
   responseData = "./data/results.json"
 
   #////////////////////////////
-  maxpages = 5
+  maxpages = 1
   body = json.load(open(payload))
   #////////////////////////////
   file = open(responseData, 'w')
@@ -22,6 +22,6 @@ def Pull_items():
   except Exception as e:
     print ("---------------- Failed Gathering Items - Quiting the Driver ----------------")
     print(e)
-    
+  file.close()  
   return json.dumps(response, indent=4)
-  file.close()
+  
